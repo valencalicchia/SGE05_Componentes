@@ -1,0 +1,28 @@
+<!-- stock_info/views/stock_info_views.xml -->
+<odoo>
+    <!-- Vista de árbol para listar productos -->
+    <record id="view_stock_info_tree" model="ir.ui.view">
+        <field name="name">stock.info.tree</field>
+        <field name="model">product.product</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="default_code"/> <!-- Código del producto -->
+                <field name="name"/> <!-- Descripción del producto -->
+                <field name="qty_available"/> <!-- Stock actual -->
+                <button string="Exportar CSV" type="object" name="export_csv" class="btn-primary"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Acción para abrir la vista de productos -->
+    <record id="action_stock_info" model="ir.actions.act_window">
+        <field name="name">Stock Information</field>
+        <field name="res_model">product.product</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_stock_info_tree"/>
+    </record>
+
+    <!-- Menú principal -->
+    <menuitem id="menu_stock_info_root" name="Stock Info"/>
+    <menuitem id="menu_stock_info" name="Consultar Stock" parent="menu_stock_info_root" action="action_stock_info"/>
+</odoo>
