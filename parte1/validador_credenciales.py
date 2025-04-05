@@ -94,9 +94,9 @@ if __name__ == "__main__":
     1. Modo interactivo (solicita credenciales al usuario)
     2. Opcionalmente, modo de prueba con casos predefinidos
     """
-    print("=== Modo interactivo ===")
-    solicitar_y_validar_credenciales()
+    # print("=== Modo interactivo ===")
+    # solicitar_y_validar_credenciales()
     
-    # Descomentar para ejecutar casos de prueba
-    # print("\n=== Casos de ejemplo ===")
-    # probar_casos_ejemplo()
+    #Descomentar para ejecutar casos de prueba
+    print("\n=== Casos de ejemplo ===")
+    probar_casos_ejemplo()

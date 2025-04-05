@@ -68,11 +68,13 @@ class GestionTabla:
             
         Crea el archivo si no existe, lo sobrescribe si ya existe.
         """
+        campos = list(self.datos[0].keys())
+
         with open(archivo, mode='w', newline='', encoding='utf-8') as f:
-            campos = ["Nombre", "Apellido", "Fecha Nacimiento", "Dirección", "Contraseña"]
             escritor = csv.DictWriter(f, fieldnames=campos)
-            escritor.writeheader()  # Escribe la fila de encabezado
-            escritor.writerows(self.datos)  # Escribe todos los registros
+            escritor.writeheader()
+            escritor.writerows(self.datos)
+
         print(f"Datos guardados en '{archivo}'!\n")
 
     def cargar_csv(self, archivo="datos.csv"):

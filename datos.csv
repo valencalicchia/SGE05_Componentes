@@ -1,2 +1,4 @@
-Nombre,Apellidos,Fecha Nacimiento,Dirección,Contraseña
-valen,cali,2002-07-24,calle,hola
+Nombre,Apellido,Fecha Nacimiento,Dirección,Contraseña,Teléfono,Email,Web,Población,Código Postal,Tipo,Login
+Manolo Martín Pajares,Martín,,Calle Mayor 1,M49aJ33o$,123456789,manolo@example.com,http://manoloweb.com,Madrid,28001,C,mmartín
+Lucía Gómez Ramírez,Gómez,,Calle Luna 7,R49uC33e$,987654321,lucia@example.com,http://luciagomez.net,Barcelona,08002,P,lgómez
+Carlos López Díaz,López,,Av. Siempre Viva 742,C49óP33z&,555666777,carlos@example.com,http://carlosdiaz.org,Valencia,46001,T,clópez

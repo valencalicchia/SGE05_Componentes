@@ -1,0 +1,8 @@
+<odoo>
+    <record id="category_customer" model="res.partner.category">
+        <field name="name">Cliente</field>
+    </record>
+    <record id="category_supplier" model="res.partner.category">
+        <field name="name">Proveedor</field>
+    </record>
+</odoo>
