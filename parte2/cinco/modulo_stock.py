@@ -122,12 +122,12 @@ class OdooStockManager:
             print(f"Error obteniendo detalle del producto: {e}")
             return None
     
-    def save_stock_to_csv(self, filename="stock_list.csv"):
+    def save_stock_to_csv(self, filename="stock_list_cinco.csv"):
         """
         Exporta el listado de stock actual a un archivo CSV.
         
         Parámetros:
-            filename (str): Nombre del archivo CSV a generar (default: "stock_list.csv")
+            filename (str): Nombre del archivo CSV a generar (default: "stock_list_cinco.csv")
             
         Proceso:
         1. Obtiene todos los productos
