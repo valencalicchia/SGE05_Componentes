@@ -59,28 +59,30 @@ class GestionTabla:
         else:
             print("No se encontraron coincidencias.\n")
 
-    def guardar_csv(self, archivo="datos.csv"):
+    def guardar_csv(self, archivo="datos_cuatro.csv"):
         """
         Guarda los datos actuales en un archivo CSV.
         
         Parámetros:
-            archivo (str): Nombre del archivo CSV (default: 'datos.csv')
+            archivo (str): Nombre del archivo CSV (default: 'datos_cuatro.csv')
             
         Crea el archivo si no existe, lo sobrescribe si ya existe.
         """
+        campos = list(self.datos[0].keys())
+
         with open(archivo, mode='w', newline='', encoding='utf-8') as f:
-            campos = ["Nombre", "Apellido", "Fecha Nacimiento", "Dirección", "Contraseña"]
             escritor = csv.DictWriter(f, fieldnames=campos)
-            escritor.writeheader()  # Escribe la fila de encabezado
-            escritor.writerows(self.datos)  # Escribe todos los registros
+            escritor.writeheader()
+            escritor.writerows(self.datos)
+
         print(f"Datos guardados en '{archivo}'!\n")
 
-    def cargar_csv(self, archivo="datos.csv"):
+    def cargar_csv(self, archivo="datos_cuatro.csv"):
         """
         Carga datos desde un archivo CSV a la lista interna.
         
         Parámetros:
-            archivo (str): Nombre del archivo CSV a cargar (default: 'datos.csv')
+            archivo (str): Nombre del archivo CSV a cargar (default: 'datos_cuatro.csv')
             
         Si el archivo no existe, muestra un mensaje de error sin interrumpir el programa.
         """
