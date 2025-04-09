@@ -36,8 +36,8 @@ class ImportClientes(models.Model):
                 "website": fila["Página web"],
                 "city": fila["Población"],
                 "zip": fila["Código Postal"],
-                "customer_rank": 1 if is_customer else 0,
-                "supplier_rank": 1 if is_supplier else 0,
+                # "customer_rank": 1 if is_customer else 0,
+                # "supplier_rank": 1 if is_supplier else 0,
             }
 
             cliente = cliente_modelo.create(cliente_data)
